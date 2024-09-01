@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="google-site-verification" content="-x4iXe5Jx6SEC4lqS3V-BkTPHXKsv4BB8j-6xpeaINU" />
+		<title>WWT Grade Calculator</title>
+		<link rel="stylesheet" href="style/index.css">
+		<script src="js/app.js"></script>
+	</head>
+	<header>
+		<h2 id="title"> Lets Talk About Your Grade... </h2>
+	</header>
+	<body>		
+		<form id="gradeCalculatorForm">
+			<label class="labels" for="firstScore">Quarter 1 or 3 Grade:</label>							
+			<input type="number" class="inputs" id="firstScore" placeholder="Enter score" required> 
+			<img src="src/droppic.png" style="position:relative; right: 338px; top:42px">  			
+			<br>
+
+			<label class="labels" for="firstScoreWeight" id="ScoreWeightLabel">Weight (in %):</label>                            
+			<input type="number" class="inputs" id="firstScoreWeight" value="40" required> 
+			<br>
+
+			<label class="labels" for="secondScore">Quarter 2 or 4 Grade:</label>                                
+			<input type="number" class="inputs" id="secondScore" placeholder="Enter score" required>
+			<img src="src/droppic.png" style="position:relative; right: 338px; top:42px"> 
+			<br>
+
+			<label class="labels" for="secondScoreWeight" id="ScoreWeightLabel">Weight (in %):</label>                           
+			<input type="number" class="inputs" id="secondScoreWeight" value="40" required>
+			<br>
+
+			<label class="labels" for="examScore">Midterm/Final Exam:</label>                                            
+			<input type="number" class="inputs" id="examScore" placeholder="Enter score" required>
+			<img src="src/droppic.png" style="position:relative; right: 335px; top:42px"> 
+			<br>
+
+			<label class="labels" for="examWeight" id="ScoreWeightLabel">Weight (in %):</label>                                  
+			<input type="number" class="inputs" id="examWeight" value="20" required>
+			<br>
+
+			<button type="button" class="buttons" onclick="calculateFinalGrade()">Calculate Final Grade</button>
+			<br>
+
+			<label class="labels" for="finalGrade">Your Final Grade:</label>                                  
+			<input type="number" class="inputs" id="finalGrade" required>
+			<br>
+
+			<button type="button" class="buttons" onclick="calculateExamGrade()">Calculate Midterm/Final Grade</button>
+			<br>
+
+			<button type="button" class="buttons" onclick="resetForm()">Reset</button>
+			<br>
+
+		</form>		
+
+		<div class="waves">
+			<svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+				<defs><path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" /></defs>
+				<g class="parallax">
+					<use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+					<use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+					<use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+					<use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+				</g>
+			</svg>
+		</div>
+
+		<div class="content flex">
+			<p id="credits"> Grade Calculator for Warren Woods Tower High School made by Maaj Rahman and Abid Chowdhury | Created 12/4/23</p>
+		</div>
+		<div class="content flex">
+			<a href="https://www.linkedin.com/in/maaj-rahman-282733277/">
+				<img src="src/Linkedin-logo.png" alt="LinkedIn icon" width="50px">
+			</a>
+		</div>
+		
+</html>
